@@ -76,6 +76,7 @@ class FileAggrSecondServiceProvider extends ServiceProvider {
         //Для Extractor'a
         $capGenerator = new CapGenerator($settingsSet);
         $itemFactory = new FileItemFactory($collectionFactory, $cItemBuilder, $settingsSet, $capGenerator);
+        $capGenerator->setFactory($itemFactory);//Взаимная зависимость
 
         $fileQuerier = new FileQuerier();
         $mapper = new FileBMapper($itemFactory, $fileQuerier, $tuner, $capGenerator);

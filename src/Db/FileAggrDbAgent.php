@@ -11,6 +11,7 @@ use Interpro\FileAggr\Contracts\Db\FileAggrDbAgent as FileAggrDbAgentInterface;
 class FileAggrDbAgent implements FileAggrDbAgentInterface
 {
     private $refConsistMediator;
+
     /**
      * @return void
      */
