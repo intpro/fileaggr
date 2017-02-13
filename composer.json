@@ -1,0 +1,39 @@
+{
+    "name": "interpro/fileaggr",
+    "description": "Файлы.",
+    "version": "1.0.1",
+    "require": {
+        "interpro/core": "1.1.*",
+        "interpro/extractor": "1.0.*",
+        "interpro/service": "1.1.*"
+    },
+    "keywords": [
+        "fileaggr"
+    ],
+    "license": "MIT",
+    "authors": [
+    {
+        "name": "Boris Dorofeev",
+        "email": "boris.dorofeev@gmail.com"
+    }
+    ],
+    "autoload": {
+        "classmap": [],
+        "files": [],
+        "psr-4": {
+        "Interpro\\FileAggr\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Interpro\\FileAggr\\Test": "test/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true
+}
