@@ -5,6 +5,7 @@ namespace Interpro\FileAggr\Db;
 use Interpro\Core\Contracts\Ref\ARef;
 use Interpro\Core\Contracts\Taxonomy\Fields\OwnField;
 use Interpro\Core\Contracts\Taxonomy\Types\AType;
+use Interpro\Core\Helpers;
 use Interpro\Core\Taxonomy\Enum\TypeRank;
 use Interpro\Extractor\Contracts\Db\BMapper;
 use Interpro\Extractor\Contracts\Selection\SelectionUnit;
@@ -109,7 +110,7 @@ class FileBMapper implements BMapper
 
         $filesQuery = $this->fileQuerier->selectFilesByRef($ref);
 
-        $files_result = $filesQuery->get();
+        $files_result = Helpers::laravel_db_result_to_array($filesQuery->get());
 
         $collection = $this->resultsToCollection($ownerType, $files_result);
 
@@ -138,7 +139,7 @@ class FileBMapper implements BMapper
         //----------------------------------------------------------
         $filesQuery = $this->fileQuerier->selectFilesByUnit($selectionUnit);
 
-        $files_result = $filesQuery->get();
+        $files_result = Helpers::laravel_db_result_to_array($filesQuery->get());
 
         $collection = $this->resultsToCollection($ownerType, $files_result);
 

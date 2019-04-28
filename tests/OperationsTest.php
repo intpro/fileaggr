@@ -37,7 +37,7 @@ class OperationsTest extends TestCase
         return $app;
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -64,7 +64,7 @@ class OperationsTest extends TestCase
         $this->dbAgent = new TestFileAggrDbAgent();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $file_dir = $this->pathResolver->getFileDir();
 
