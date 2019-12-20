@@ -26,7 +26,7 @@ class FileAggrUseServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        Log::info('Регистрация FileAggrUseServiceProvider');
+        //Log::info('Регистрация FileAggrUseServiceProvider');
 
         $this->app->singleton(
             'Interpro\FileAggr\Contracts\Db\FileAggrDbAgent',

@@ -78,7 +78,7 @@ class FileOperationController extends Controller
                     'entity_name' => 'required',
                     'file_name' => 'required',
                     'entity_id' => 'integer|min:0',
-                    'file' => 'required|file|max:5120',
+                    'file' => 'required|file|max:30720',
                 ]
             );
 
